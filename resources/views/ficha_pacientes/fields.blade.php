@@ -1,7 +1,7 @@
 <!-- Nombre Field -->
 <div class="form-group col-sm-6">
-    {!! Form::label('nombre', 'Nombre:') !!}
-    {!! Form::select('nombre', $pacienteItems, null, ['class' => 'form-control custom-select']) !!}    
+    {!! Form::label('fk_paciente', 'Nombre:') !!}
+    {!! Form::select('fk_paciente', $pacienteItems, null, ['class' => 'form-control custom-select']) !!}
 </div>
 
 <!-- fecha Field -->
@@ -15,6 +15,7 @@
     {!! Form::label('hora_inicio', 'Hora Inicio:') !!}
     {!! Form::time('hora_inicio', null, ['class' => 'form-control']) !!}
 </div>
+
 
 <!-- Doctor Field -->
 <div class="form-group col-sm-6">

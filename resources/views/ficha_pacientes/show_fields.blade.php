@@ -1,7 +1,8 @@
 <!-- Nombre Field -->
 <div class="col-sm-12">
     {!! Form::label('nombre', 'Nombre:') !!}
-    <p>{{ $fichaPaciente->nombre }}</p>
+    <p>{{ $fichaPaciente->fk_paciente }}</p>
+        
 </div>
 
 <!-- Fecha Field -->
@@ -33,5 +34,3 @@
     {!! Form::label('diagnostico', 'Diagnostico:') !!}
     <p>{{ $fichaPaciente->diagnostico }}</p>
 </div>
-
-

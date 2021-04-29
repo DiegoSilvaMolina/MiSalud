@@ -12,43 +12,7 @@
         "inView": false
     },
     {
-        "name": "fk_paciente",
-        "dbType": "insignedInteger",
-        "htmlType": "selectTable:pacientes:nombre_paciente,id",
-        "validations": "required",
-        "searchable": true,
-        "fillable": true,
-        "primary": false,
-        "inForm": true,
-        "inIndex": true,
-        "inView": true
-    },
-    {
-        "name": "fecha",
-        "dbType": "date",
-        "htmlType": null,
-        "validations": "required",
-        "searchable": true,
-        "fillable": true,
-        "primary": false,
-        "inForm": true,
-        "inIndex": true,
-        "inView": true
-    },
-    {
-        "name": "hora_inicio",
-        "dbType": "time",
-        "htmlType": null,
-        "validations": "required",
-        "searchable": true,
-        "fillable": true,
-        "primary": false,
-        "inForm": true,
-        "inIndex": true,
-        "inView": true
-    },
-    {
-        "name": "doctor",
+        "name": "nombre",
         "dbType": "string",
         "htmlType": "text",
         "validations": "required",
@@ -60,21 +24,9 @@
         "inView": true
     },
     {
-        "name": "especialidad",
+        "name": "apellido",
         "dbType": "string",
         "htmlType": "text",
-        "validations": "required",
-        "searchable": true,
-        "fillable": true,
-        "primary": false,
-        "inForm": true,
-        "inIndex": true,
-        "inView": true
-    },
-    {
-        "name": "diagnostico",
-        "dbType": "text",
-        "htmlType": "textarea",
         "validations": "required",
         "searchable": true,
         "fillable": true,

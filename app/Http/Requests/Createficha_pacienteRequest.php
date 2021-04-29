@@ -4,6 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 use App\Models\ficha_paciente;
+use App\Models\paciente;
 
 class Createficha_pacienteRequest extends FormRequest
 {
@@ -26,5 +27,7 @@ class Createficha_pacienteRequest extends FormRequest
     public function rules()
     {
         return ficha_paciente::$rules;
+        
+
     }
 }

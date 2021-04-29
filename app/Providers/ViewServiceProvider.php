@@ -27,6 +27,10 @@ class ViewServiceProvider extends ServiceProvider
     public function boot()
     {
         View::composer(['ficha_pacientes.fields'], function ($view) {
+            $pacienteItems = Paciente::pluck('nombre_paciente','id')->toArray();
+            $view->with('pacienteItems', $pacienteItems);
+        });
+        View::composer(['ficha_pacientes.fields'], function ($view) {
             $pacienteItems = Paciente::pluck('nombre_paciente','nombre_paciente')->toArray();
             $view->with('pacienteItems', $pacienteItems);
         });

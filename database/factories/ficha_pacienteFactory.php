@@ -8,7 +8,7 @@ use Faker\Generator as Faker;
 $factory->define(ficha_paciente::class, function (Faker $faker) {
 
     return [
-        'nombre' => $faker->word,
+        'fk_paciente' => $faker->randomDigitNotNull,
         'fecha' => $faker->word,
         'hora_inicio' => $faker->word,
         'doctor' => $faker->word,

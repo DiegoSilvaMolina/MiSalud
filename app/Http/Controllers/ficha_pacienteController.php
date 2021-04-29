@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Http\Controllers;
 
 use App\Http\Requests\Createficha_pacienteRequest;
@@ -9,6 +8,9 @@ use App\Http\Controllers\AppBaseController;
 use Illuminate\Http\Request;
 use Flash;
 use Response;
+use App\Models\paciente;
+
+use Illuminate\Support\Facades\DB;
 
 class ficha_pacienteController extends AppBaseController
 {
@@ -30,9 +32,14 @@ class ficha_pacienteController extends AppBaseController
     public function index(Request $request)
     {
         $fichaPacientes = $this->fichaPacienteRepository->all();
+        $pacientes = paciente::all();
+
+        //dd($pacientes);
+        
+        
 
         return view('ficha_pacientes.index')
-            ->with('fichaPacientes', $fichaPacientes);
+            ->with('fichaPacientes', $fichaPacientes)->with('pacientes',$pacientes);
     }
 
     /**
@@ -56,11 +63,16 @@ class ficha_pacienteController extends AppBaseController
     {
         $input = $request->all();
 
-        $fichaPaciente = $this->fichaPacienteRepository->create($input);
+        $fichaPacientes = $this->fichaPacienteRepository->create($input);
+        $pacientes = paciente::all();
+        
 
-        Flash::success('Ficha Paciente guardado correctamente!');
+        Flash::success('Ficha Paciente guardada exitosamente!');
 
         return redirect(route('fichaPacientes.index'));
+
+
+        return view('ficha_pacientes.index')->with('fichaPacientes', $fichaPacientes);
     }
 
     /**
@@ -73,6 +85,11 @@ class ficha_pacienteController extends AppBaseController
     public function show($id)
     {
         $fichaPaciente = $this->fichaPacienteRepository->find($id);
+        $pacientes = paciente::all();
+        
+
+        //$sql= 'SELECT P.nombre_paciente AS nombre,fp.fecha, FP.hora_inicio AS hora_inicio,FP.doctor, FP.especialidad,FP.diagnostico FROM ficha_pacientes FP INNER JOIN  pacientes P;';
+        //$ficha=DB::select($sql);
 
         if (empty($fichaPaciente)) {
             Flash::error('Ficha Paciente not found');
@@ -80,7 +97,7 @@ class ficha_pacienteController extends AppBaseController
             return redirect(route('fichaPacientes.index'));
         }
 
-        return view('ficha_pacientes.show')->with('fichaPaciente', $fichaPaciente);
+        return view('ficha_pacientes.show')->with('fichaPaciente', $fichaPaciente)->with('pacientes',$pacientes);
     }
 
     /**
@@ -93,7 +110,6 @@ class ficha_pacienteController extends AppBaseController
     public function edit($id)
     {
         $fichaPaciente = $this->fichaPacienteRepository->find($id);
-        
 
         if (empty($fichaPaciente)) {
             Flash::error('Ficha Paciente not found');
@@ -150,7 +166,7 @@ class ficha_pacienteController extends AppBaseController
 
         $this->fichaPacienteRepository->delete($id);
 
-        Flash::success('Ficha Paciente eliminado exitosamente!');
+        Flash::success('Ficha Paciente eliminada exitosamente!');
 
         return redirect(route('fichaPacientes.index'));
     }

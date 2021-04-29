@@ -33,3 +33,7 @@ Route::group(['middleware' => ['permission:edit_users|view_users|delete_users|cr
 Route::group(['middleware' => ['permission:edit_ficha_pacientes|view_ficha_pacientes|delete_ficha_pacientes|create_ficha_pacientes']], function () {
     Route::resource('fichaPacientes', 'ficha_pacienteController');
 });
+
+
+
+

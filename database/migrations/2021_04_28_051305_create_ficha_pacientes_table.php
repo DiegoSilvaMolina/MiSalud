@@ -16,7 +16,8 @@ class CreateFichaPacientesTable extends Migration
     {
         Schema::create('ficha_pacientes', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('nombre');
+            $table->unsignedInteger('fk_paciente');
+            $table->foreign('fk_paciente')->references('id')->on('pacientes')->onUpdate('cascade')->onDelete ('cascade') ;
             $table->date('fecha');
             $table->time('hora_inicio');
             $table->string('doctor');

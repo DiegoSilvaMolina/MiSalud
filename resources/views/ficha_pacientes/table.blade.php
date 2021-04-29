@@ -12,9 +12,11 @@
             </tr>
         </thead>
         <tbody>
+        
         @foreach($fichaPacientes as $fichaPaciente)
             <tr>
-                <td>{{ $fichaPaciente->nombre }}</td>
+                  
+            <td>{{ $fichaPaciente->nombre_paciente }}</td>
             <td>{{ $fichaPaciente->fecha }}</td>
             <td>{{ $fichaPaciente->hora_inicio }}</td>
             <td>{{ $fichaPaciente->doctor }}</td>
@@ -34,7 +36,7 @@
                         </a>
                         @endcan
                         @can('delete_ficha_pacientes')
-                        {!! Form::button('<i class="far fa-trash-alt"></i>', ['type' => 'submit', 'class' => 'btn btn-danger btn-xs', 'onclick' => "return confirm('Estas seguro de eliminar?')"]) !!}
+                        {!! Form::button('<i class="far fa-trash-alt"></i>', ['type' => 'submit', 'class' => 'btn btn-danger btn-xs', 'onclick' => "return confirm('Esta seguro de eliminar?')"]) !!}
                         @endcan
                     </div>
                     {!! Form::close() !!}

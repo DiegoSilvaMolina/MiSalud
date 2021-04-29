@@ -4,13 +4,14 @@ namespace App\Models;
 
 use Eloquent as Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use App\paciente;
 
 /**
  * Class ficha_paciente
  * @package App\Models
- * @version April 24, 2021, 10:58 pm UTC
+ * @version April 28, 2021, 5:13 am UTC
  *
- * @property string $nombre
+ * @property integer $fk_paciente
  * @property string $fecha
  * @property time $hora_inicio
  * @property string $doctor
@@ -23,19 +24,22 @@ class ficha_paciente extends Model
 
     public $table = 'ficha_pacientes';
     
+    
 
     protected $dates = ['deleted_at'];
 
 
 
     public $fillable = [
-        'nombre',
+        'fk_paciente',
         'fecha',
         'hora_inicio',
         'doctor',
         'especialidad',
         'diagnostico'
     ];
+
+    
 
     /**
      * The attributes that should be casted to native types.
@@ -44,7 +48,7 @@ class ficha_paciente extends Model
      */
     protected $casts = [
         'id' => 'integer',
-        'nombre' => 'string',
+        'fk_paciente' => 'integer',
         'fecha' => 'date',
         'doctor' => 'string',
         'especialidad' => 'string',
@@ -57,7 +61,7 @@ class ficha_paciente extends Model
      * @var array
      */
     public static $rules = [
-        'nombre' => 'required',
+        'fk_paciente' => 'required',
         'fecha' => 'required',
         'hora_inicio' => 'required',
         'doctor' => 'required',

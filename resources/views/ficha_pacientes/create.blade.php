@@ -7,6 +7,7 @@
                 <div class="col-sm-12">
                     <h1>Crear Ficha Paciente</h1>
                 </div>
+                
             </div>
         </div>
     </section>
