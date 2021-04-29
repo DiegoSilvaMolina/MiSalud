@@ -33,6 +33,7 @@ class ficha_pacienteController extends AppBaseController
     {
         $fichaPacientes = $this->fichaPacienteRepository->all();
         $pacientes = paciente::all();
+        
 
         //dd($pacientes);
         
