@@ -2,14 +2,8 @@
 
 # Laravel Boilerplate for AdminLTE Theme
 
-Laravel Boilerplate with [AdminLTE](https://adminlte.io/) Theme with [InfyOm Laravel Generator](https://github.com/InfyOmLabs/laravel-generator).
-Following things are ready to be used directly with AdminLTE Theme.
+Proyecto desarrollado en laravel con infyom generator y spatie, es un administrador de pacientes y fichas de pacientes con sus distintos roles
 
-- Signup
-- Login
-- Forgot Password
-- Password Reset
-- Home Layout with Sidebar
 
 ## Packages Installed
 
@@ -17,6 +11,7 @@ Following things are ready to be used directly with AdminLTE Theme.
 - AdminLTE Templates
 - Laravel UI
 - Laravel Collective
+- Spatie
 
 ## Usage
 
@@ -45,16 +40,4 @@ You can support us by either sponsoring us or buying one of our paid products. O
 
 <a href="https://opencollective.com/infyomlabs#backer"><img src="https://opencollective.com/infyomlabs/backers.svg?width=890"></a>
 
-### Buy our Paid Products
 
-[![InfyHMS](https://assets.infyom.com/open-source/infyhms-banner.png)](https://bit.ly/3mtqXuk)
-
-You can also check out our other paid products on [CodeCanyon](https://codecanyon.net/user/infyomlabs/portfolio).
-
-### Follow Us
-
-- [Twitter](https://twitter.com/infyom)
-- [Facebook](https://www.facebook.com/infyom)
-- [LinkedIn](https://in.linkedin.com/company/infyom-technologies)
-- [Youtube](https://www.youtube.com/channel/UC8IvwfChD6i7Wp4yZp3tNsQ)
-- [Contact Us](https://infyom.com/contact-us)
