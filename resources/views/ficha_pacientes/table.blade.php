@@ -16,7 +16,7 @@
         @foreach($fichaPacientes as $fichaPaciente)
             <tr>
                   
-            <td>{{ $fichaPaciente->nombre_paciente }}</td>
+            <td>{{ $fichaPaciente->fk_paciente }}</td>
             <td>{{ $fichaPaciente->fecha }}</td>
             <td>{{ $fichaPaciente->hora_inicio }}</td>
             <td>{{ $fichaPaciente->doctor }}</td>
